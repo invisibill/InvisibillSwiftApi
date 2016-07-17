@@ -10,10 +10,10 @@ import ObjectMapper
 
 public class InvisibillContract: InvisibillModel {
 
-    var id: Int!
-    var resources: Set<InvisibillResource>!
-    var sourceEntity: InvisibillEntity!
-    var targetEntity: InvisibillEntity!
+    public var id: Int!
+    public var resources: Set<InvisibillResource>!
+    public var sourceEntity: InvisibillEntity!
+    public var targetEntity: InvisibillEntity!
 
     public override func mapping(map: Map) {
         id <- map["id"]

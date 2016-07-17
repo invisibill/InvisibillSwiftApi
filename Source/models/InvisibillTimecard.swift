@@ -10,12 +10,12 @@ import ObjectMapper
 
 public class InvisibillTimecard: InvisibillModel {
 
-    var id: Int!
-    var taskCode: String!
-    var activityCode: String!
-    var narrative: String!
-    var startedAt: String!
-    var endedAt: String!
+    public var id: Int!
+    public var taskCode: String!
+    public var activityCode: String!
+    public var narrative: String!
+    public var startedAt: String!
+    public var endedAt: String!
 
     public override func mapping(map: Map) {
         id <- map["id"]

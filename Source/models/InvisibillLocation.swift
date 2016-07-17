@@ -10,16 +10,16 @@ import ObjectMapper
 
 public class InvisibillLocation: InvisibillModel {
 
-    var id: Int!
-    var name: String!
-    var address1: String!
-    var address2: String!
-    var city: String!
-    var state: String!
-    var zip: String!
-    var country: String!
-    var latitude: Double!
-    var longitude: Double!
+    public var id: Int!
+    public var name: String!
+    public var address1: String!
+    public var address2: String!
+    public var city: String!
+    public var state: String!
+    public var zip: String!
+    public var country: String!
+    public var latitude: Double!
+    public var longitude: Double!
 
     public override func mapping(map: Map) {
         id <- map["id"]

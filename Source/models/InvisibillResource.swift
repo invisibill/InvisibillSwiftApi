@@ -10,11 +10,11 @@ import ObjectMapper
 
 public class InvisibillResource: InvisibillModel {
 
-    var id: Int!
-    var contract: InvisibillContract!
-    var timecards: Set<InvisibillTimecard>!
-    var invoices: Set<InvisibillInvoice>!
-    var billRate: Double!
+    public var id: Int!
+    public var contract: InvisibillContract!
+    public var timecards: Set<InvisibillTimecard>!
+    public var invoices: Set<InvisibillInvoice>!
+    public var billRate: Double!
 
     public override func mapping(map: Map) {
         id <- map["id"]
