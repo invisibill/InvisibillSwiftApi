@@ -10,7 +10,7 @@ import ObjectMapper
 
 public class InvisibillResource: InvisibillModel {
 
-    public var id: Int!
+    public var id: String!
     public var contract: InvisibillContract!
     public var timecards: Set<InvisibillTimecard>!
     public var invoices: Set<InvisibillInvoice>!

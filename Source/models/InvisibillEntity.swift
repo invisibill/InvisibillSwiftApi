@@ -10,7 +10,7 @@ import ObjectMapper
 
 public class InvisibillEntity: InvisibillModel {
 
-    public var id: Int!
+    public var id: String!
     public var name: String!
     public var locations: Set<InvisibillLocation>!
 

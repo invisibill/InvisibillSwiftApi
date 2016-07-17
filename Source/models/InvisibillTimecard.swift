@@ -10,7 +10,7 @@ import ObjectMapper
 
 public class InvisibillTimecard: InvisibillModel {
 
-    public var id: Int!
+    public var id: String!
     public var taskCode: String!
     public var activityCode: String!
     public var narrative: String!

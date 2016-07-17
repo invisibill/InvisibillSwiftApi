@@ -10,7 +10,7 @@ import ObjectMapper
 
 public class InvisibillInvoice: InvisibillModel {
 
-    public var id: Int!
+    public var id: String!
     public var resource: InvisibillResource!
     public var billableHours: Double!
     public var paid = false
