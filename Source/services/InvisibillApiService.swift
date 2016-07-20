@@ -51,7 +51,6 @@ public class InvisibillApiService: KTApiService {
             path = path.substringToIndex(path.endIndex.predecessor())
         }
 
-        let targetName = NSBundle.mainBundle().infoDictionary?["CFBundleName"] ?? ""
         return NSClassFromString("InvisibillSwiftApi.Invisibill\(path.capitalizedString)")
     }
 
