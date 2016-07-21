@@ -17,6 +17,8 @@ public class InvisibillTimecard: InvisibillModel {
     public var startedAt: String!
     public var endedAt: String!
     public var humanReadableDuration: String!
+    public var resourceId: String!
+    public var invoiceId: String!
 
     public override func mapping(map: Map) {
         id <- map["id"]
@@ -26,6 +28,8 @@ public class InvisibillTimecard: InvisibillModel {
         startedAt <- map["started_at"]
         endedAt <- map["ended_at"]
         humanReadableDuration <- map["human_readable_duration"]
+        resourceId <- map["resource_id"]
+        invoiceId <- map["invoice_id"]
     }
 
     public var startedAtDate: NSDate! {
