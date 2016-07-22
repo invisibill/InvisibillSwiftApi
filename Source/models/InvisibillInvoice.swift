@@ -12,6 +12,7 @@ public class InvisibillInvoice: InvisibillModel {
 
     public var id: String!
     public var resource: InvisibillResource!
+    public var billAmount = 0.0
     public var billableHours: Double!
     public var paid = false
     public var pending = false
@@ -19,6 +20,7 @@ public class InvisibillInvoice: InvisibillModel {
     public override func mapping(map: Map) {
         id <- map["id"]
         resource <- map["resource"]
+        billAmount <- map["bill_amount"]
         billableHours <- map["billable_hours"]
         paid <- map["paid"]
         pending <- map["pending"]
