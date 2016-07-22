@@ -56,26 +56,37 @@ public class InvisibillApiService: KTApiService {
 
     // MARK: Contracts
 
-    public func listContracts(successHandler: KTApiSuccessHandler?,
+    public func listContracts(params: [String : AnyObject],
+                              successHandler: KTApiSuccessHandler?,
                               failureHandler: KTApiFailureHandler?) {
-        execute(Alamofire.request(.GET, "\(apiUrl)/api/contracts", headers: buildRequestHeaders()),
-                successHandler: successHandler, failureHandler: failureHandler)
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/contracts", headers: buildRequestHeaders(), parameters: params),
+            successHandler: successHandler,
+            failureHandler: failureHandler)
     }
 
     // MARK: Locations
 
-    public func listLocations(successHandler: KTApiSuccessHandler?,
+    public func listLocations(params: [String : AnyObject],
+                              successHandler: KTApiSuccessHandler?,
                               failureHandler: KTApiFailureHandler?) {
-        execute(Alamofire.request(.GET, "\(apiUrl)/api/locations", headers: buildRequestHeaders()),
-                successHandler: successHandler, failureHandler: failureHandler)
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/locations", headers: buildRequestHeaders(), parameters: params),
+            successHandler: successHandler,
+            failureHandler: failureHandler)
     }
 
     // MARK: Timecards
 
     public func listTimecards(successHandler: KTApiSuccessHandler?,
                               failureHandler: KTApiFailureHandler?) {
-        execute(Alamofire.request(.GET, "\(apiUrl)/api/timecards", headers: buildRequestHeaders()),
-                successHandler: successHandler, failureHandler: failureHandler)
+        listTimecards([:], successHandler: successHandler, failureHandler: failureHandler)
+    }
+
+    public func listTimecards(params: [String : AnyObject],
+                              successHandler: KTApiSuccessHandler?,
+                              failureHandler: KTApiFailureHandler?) {
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/timecards", headers: buildRequestHeaders(), parameters: params),
+            successHandler: successHandler,
+            failureHandler: failureHandler)
     }
 
     public func createTimecardForResourceWithId(resourceId: String,
@@ -119,9 +130,10 @@ public class InvisibillApiService: KTApiService {
 
     // MARK: Invoices
 
-    public func listInvoices(successHandler: KTApiSuccessHandler?,
-                              failureHandler: KTApiFailureHandler?) {
-        execute(Alamofire.request(.GET, "\(apiUrl)/api/invoices", headers: buildRequestHeaders()),
+    public func listInvoices(params: [String : AnyObject],
+                             successHandler: KTApiSuccessHandler?,
+                             failureHandler: KTApiFailureHandler?) {
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/invoices", headers: buildRequestHeaders(), parameters: params),
                 successHandler: successHandler, failureHandler: failureHandler)
     }
 
