@@ -16,7 +16,9 @@ public class InvisibillInvoice: InvisibillModel {
     public var billableHours: Double!
     public var paid = false
     public var pending = false
-
+    public var periodStartingAt: String!
+    public var periodEndingAt: String!
+    
     public override func mapping(map: Map) {
         id <- map["id"]
         resource <- map["resource"]
@@ -24,5 +26,7 @@ public class InvisibillInvoice: InvisibillModel {
         billableHours <- map["billable_hours"]
         paid <- map["paid"]
         pending <- map["pending"]
+        periodStartingAt <- map["period_starting_at"]
+        periodEndingAt <- map["period_ending_at"]
     }
 }
