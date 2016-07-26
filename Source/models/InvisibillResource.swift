@@ -17,6 +17,8 @@ public class InvisibillResource: InvisibillModel {
     public var identifier: String!
     public var billRate: Double!
     public var metadata: [String : AnyObject]!
+    public var periodStartingAt: String!
+    public var periodEndingAt: String!
 
     public override func mapping(map: Map) {
         id <- map["id"]
@@ -26,5 +28,7 @@ public class InvisibillResource: InvisibillModel {
         identifier <- map["identifier"]
         billRate <- map["bill_rate"]
         metadata <- map["metadata"]
+        periodStartingAt <- map["period_starting_at"]
+        periodEndingAt <- map["period_ending_at"]
     }
 }
