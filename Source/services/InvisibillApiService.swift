@@ -163,7 +163,7 @@ public class InvisibillApiService: KTApiService {
     public func listResources(params: [String : AnyObject],
                               successHandler: KTApiSuccessHandler?,
                               failureHandler: KTApiFailureHandler?) {
-        execute(Alamofire.request(.GET, "\(apiUrl)/api/resources", parameters: params),
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/resources", headers: buildRequestHeaders(), parameters: params),
                 successHandler: successHandler, failureHandler: failureHandler)
     }
 }
