@@ -158,10 +158,12 @@ public class InvisibillApiService: KTApiService {
         execute(request, successHandler: successHandler, failureHandler: failureHandler)
     }
 
-//    public func listTimecardsForContractWithId(contractId: String,
-//                                               successHandler: KTApiSuccessHandler?,
-//                                               failureHandler: KTApiSuccessHandler?) {
-//        execute(Alamofire.request(.GET, "\(apiUrl)/api/contracts/\(contractId)/timecards"),
-//                successHandler: successHandler, failureHandler: failureHandler)
-//    }
+    // MARK: Resources
+
+    public func listResourcesForContractWithId(contractId: String,
+                                               successHandler: KTApiSuccessHandler?,
+                                               failureHandler: KTApiSuccessHandler?) {
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/resources", parameters: ["contract_id": contractId]),
+                successHandler: successHandler, failureHandler: failureHandler)
+    }
 }
