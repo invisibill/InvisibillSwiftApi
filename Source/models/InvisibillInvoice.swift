@@ -18,7 +18,8 @@ public class InvisibillInvoice: InvisibillModel {
     public var pending = false
     public var periodStartingAt: String!
     public var periodEndingAt: String!
-    
+    public var timecards: Set<InvisibillTimecard>!
+
     public override func mapping(map: Map) {
         id <- map["id"]
         resource <- map["resource"]
@@ -28,5 +29,6 @@ public class InvisibillInvoice: InvisibillModel {
         pending <- map["pending"]
         periodStartingAt <- map["period_starting_at"]
         periodEndingAt <- map["period_ending_at"]
+        timecards <- map["timecards"]
     }
 }
