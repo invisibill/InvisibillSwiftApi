@@ -9,6 +9,8 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/invisibill/InvisibillSwiftApi.git', :tag => s.version }
   s.source_files = 'Source/**/*.swift'
 
+  s.dependency 'KTSwiftExtensions'
+
+  s.osx.deployment_target = '10.11'
   s.ios.deployment_target = '9.3'
-  s.ios.dependency 'KTSwiftExtensions'
 end
