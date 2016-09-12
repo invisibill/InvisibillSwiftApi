@@ -64,6 +64,16 @@ public class InvisibillApiService: KTApiService {
             failureHandler: failureHandler)
     }
 
+    public func createContract(params: [String : AnyObject],
+                               successHandler: KTApiSuccessHandler?,
+                               failureHandler: KTApiFailureHandler?) {
+        let request = Alamofire.request(.POST, "\(apiUrl)/api/contracts",
+                                        headers: buildRequestHeaders(),
+                                        parameters: params,
+                                        encoding: .JSON)
+        execute(request, successHandler: successHandler, failureHandler: failureHandler)
+    }
+
     // MARK: Entities
 
     public func listEntities(params: [String : AnyObject],
