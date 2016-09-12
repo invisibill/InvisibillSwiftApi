@@ -64,6 +64,26 @@ public class InvisibillApiService: KTApiService {
             failureHandler: failureHandler)
     }
 
+    // MARK: Entities
+
+    public func listEntities(params: [String : AnyObject],
+                             successHandler: KTApiSuccessHandler?,
+                             failureHandler: KTApiFailureHandler?) {
+        execute(Alamofire.request(.GET, "\(apiUrl)/api/entities", headers: buildRequestHeaders(), parameters: params),
+                successHandler: successHandler,
+                failureHandler: failureHandler)
+    }
+
+    public func createEntity(params: [String : AnyObject],
+                             successHandler: KTApiSuccessHandler?,
+                             failureHandler: KTApiFailureHandler?) {
+        let request = Alamofire.request(.POST, "\(apiUrl)/api/entities",
+                                        headers: buildRequestHeaders(),
+                                        parameters: params,
+                                        encoding: .JSON)
+        execute(request, successHandler: successHandler, failureHandler: failureHandler)
+    }
+
     // MARK: Locations
 
     public func listLocations(params: [String : AnyObject],
