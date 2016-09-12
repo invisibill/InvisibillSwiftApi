@@ -1,8 +1,8 @@
-# KTSwiftExtensions
+# InvisibillSwiftApi
 
-[![Version](https://img.shields.io/cocoapods/v/KTSwiftExtensions.svg?style=flat)](http://cocoadocs.org/docsets/KTSwiftExtensions)
-[![License](https://img.shields.io/cocoapods/l/KTSwiftExtensions.svg?style=flat)](http://cocoadocs.org/docsets/KTSwiftExtensions)
-[![Platform](https://img.shields.io/cocoapods/p/KTSwiftExtensions.svg?style=flat)](http://cocoadocs.org/docsets/KTSwiftExtensions)
+[![Version](https://img.shields.io/cocoapods/v/InvisibillSwiftApi.svg?style=flat)](http://cocoadocs.org/docsets/InvisibillSwiftApi)
+[![License](https://img.shields.io/cocoapods/l/InvisibillSwiftApi.svg?style=flat)](http://cocoadocs.org/docsets/InvisibillSwiftApi)
+[![Platform](https://img.shields.io/cocoapods/p/InvisibillSwiftApi.svg?style=flat)](http://cocoadocs.org/docsets/InvisibillSwiftApi)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Example
@@ -23,14 +23,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 $ gem install cocoapods
 ```
 
-To integrate KTSwiftExtensions into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate InvisibillSwiftApi into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'KTSwiftExtensions'
+pod 'InvisibillSwiftApi'
 ```
 
 Then, run the following command:
@@ -51,13 +51,13 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate KTSwiftExtensions into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate InvisibillSwiftApi into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "fulldecent/KTSwiftExtensions" ~> 0.1
+github "fulldecent/InvisibillSwiftApi" ~> 0.1
 ```
 
-Run `carthage update` to build the framework and drag the built `KTSwiftExtensions.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `InvisibillSwiftApi.framework` into your Xcode project.
 
 
 ## Author
@@ -67,4 +67,4 @@ Kyle Thomas, k.thomas@unmarkedconsulting.com
 
 ## License
 
-KTSwiftExtensions is available under the MIT license. See the LICENSE file for more info.
+InvisibillSwiftApi is available under the MIT license. See the LICENSE file for more info.
