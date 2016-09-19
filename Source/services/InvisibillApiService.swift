@@ -118,7 +118,7 @@ public class InvisibillApiService: KTApiService {
     public func fetchTimecard(id: String,
                               successHandler: KTApiSuccessHandler?,
                               failureHandler: KTApiFailureHandler?) {
-        let request: DataRequest = Alamofire.request("\(apiUrl)/api/timecards/\(id)", method: .get,  parameters: params, headers: buildRequestHeaders())
+        let request: DataRequest = Alamofire.request("\(apiUrl)/api/timecards/\(id)", method: .get, headers: buildRequestHeaders())
         execute(request, successHandler: successHandler, failureHandler: failureHandler)
     }
 
