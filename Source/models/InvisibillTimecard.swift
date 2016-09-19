@@ -36,18 +36,18 @@ public class InvisibillTimecard: InvisibillModel {
         durationHours <- map["duration_hours"]
     }
 
-    public var startedAtDate: NSDate! {
+    public var startedAtDate: Date! {
         if let startedAt = startedAt {
-            if let startedAtDate = NSDate.fromString(startedAt) {
+            if let startedAtDate = Date.fromString(startedAt) {
                 return startedAtDate
             }
         }
         return nil
     }
 
-    public var endedAtDate: NSDate! {
+    public var endedAtDate: Date! {
         if let endedAt = endedAt {
-            if let endedAtDate = NSDate.fromString(endedAt) {
+            if let endedAtDate = Date.fromString(endedAt) {
                 return endedAtDate
             }
         }
@@ -59,17 +59,17 @@ public class InvisibillTimecard: InvisibillModel {
             return humanReadableDuration
         }
 
-        let endedAtDate: NSDate! = self.endedAtDate ?? NSDate()
+        let endedAtDate: Date! = self.endedAtDate ?? Date()
 
         if startedAtDate != nil && endedAtDate != nil {
             var remaining = endedAtDate.timeIntervalSince1970 - startedAtDate.timeIntervalSince1970
 
             let days = floor(remaining / 86400)
-            remaining = remaining % 86400
+            remaining = remaining.truncatingRemainder(dividingBy: 86400)
             let hours = floor(remaining / 3600)
-            remaining = remaining % 3600
+            remaining = remaining.truncatingRemainder(dividingBy: 3600)
             let minutes = floor(remaining / 60)
-            remaining = remaining % 60
+            remaining = remaining.truncatingRemainder(dividingBy: 60)
             if days > 0 {
                 return "\(days)d \(hours)h \(minutes)m"
             }
