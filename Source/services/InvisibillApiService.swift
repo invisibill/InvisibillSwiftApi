@@ -15,7 +15,7 @@ public class InvisibillApiService: KTApiService {
 
     private static let instance = InvisibillApiService()
 
-    private let apiUrl = NSURL("http://api.invisi-bill.com")
+    private let apiUrl = URL(string: "http://api.invisi-bill.com")!
 
     private var apiToken: String!
 
